@@ -1,0 +1,3 @@
+interface OTWSAPIRequest {
+    getData(): Object;
+}
