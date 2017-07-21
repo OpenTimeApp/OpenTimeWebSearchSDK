@@ -1,7 +1,7 @@
 {
-  "name": "opentime-typescript-boilerplate-sdk",
+  "name": "opentime-typescript-web-search-sdk",
   "version": "1.0.0",
-  "description": "OpenTime boilerplate for Typescript SDK",
+  "description": "OpenTime Web Search SDK",
   "scripts": {
     "test": "karma start"
   },
