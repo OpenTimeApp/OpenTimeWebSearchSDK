@@ -72,6 +72,9 @@ describe("Business Appointment Service", () => {
             );
 
             request.setNotes("Where in the world is carmen sandiego");
+            request.setPlacesURL("http://somegreatplace.com");
+            request.setPlacesID("alskdflaksjdflakjsdlfkjsdlkj");
+            request.setBusinessID(1);
 
             service.createBookABusinessForMeRequest(request,(response: OTWSResponse) => {
 
