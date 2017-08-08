@@ -33,9 +33,10 @@ export class OTWSBookABusinessForMeRequestRequest extends OTWSBookItForMeRequest
     getData(): any {
         let data = super.getData();
         data.business_id = this._getBusinessID();
-        data.google_data = [];
-        data.google_data["url"] = this._getPlacesURL();
-        data.google_data["id"] = this._getPlacesID();
+        data.google_data = {
+            url : this._getPlacesURL(),
+            id: this._getPlacesID()
+        };
         return data;
     }
 }
