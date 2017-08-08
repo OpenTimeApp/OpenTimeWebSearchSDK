@@ -5,7 +5,7 @@ import {OTWSBookABusinessForMeRequestRequest} from "./book-a-business-for-me-req
 
 export class OTWSBusinessAppointmentService {
 
-    private static readonly API = "business/appointment";
+    private static readonly API = "business/booking";
 
     public createBookItForMeRequest(createRequest: OTWSBookItForMeRequestRequest, callback: (response: OTWSResponse) => void): void {
 

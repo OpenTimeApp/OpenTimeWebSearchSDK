@@ -3,10 +3,22 @@ import { OTWSBookItForMeRequestRequest } from '../../../../sdk/apis/business/app
 import {OTWSAvailableTime} from "../../../../sdk/apis/otws-available-time";
 import {OTWSResponse} from "../../../../sdk/api/otws-response";
 import {OTWSBookABusinessForMeRequestRequest} from "../../../../sdk/apis/business/appointment/book-a-business-for-me-request/otws-book-a-business-for-me-request-request";
+import {TestHelper} from "../../../otws-test-helper";
 
 describe("Business Appointment Service", () => {
 
     let service: OTWSBusinessAppointmentService;
+
+    beforeAll((done) => {
+        TestHelper.beforeAll();
+        // TestHelper.restoreData(['make_groups'], (response) => {
+        //     if (!response.success) {
+        //         fail(response.message);
+        //     }
+        //     done();
+        // });
+        done();
+    });
 
     beforeEach(() => {
         service = new OTWSBusinessAppointmentService();
@@ -24,8 +36,13 @@ describe("Business Appointment Service", () => {
                 "fakeFirstName",
                 "fakeLastName",
                 "fakeEmail@email.com",
+                "dentist",
+                "Dallas",
+                "America/Chicago",
                 [fakeAvailableTime]
             );
+
+            request.setNotes("I am the shindit");
 
             service.createBookItForMeRequest(request,(response: OTWSResponse) => {
 
@@ -48,9 +65,13 @@ describe("Business Appointment Service", () => {
                 "fakeFirstName",
                 "fakeLastName",
                 "fakeEmail@email.com",
-                [fakeAvailableTime],
-                99
+                "dentist",
+                "Dallas",
+                "America/Chicago",
+                [fakeAvailableTime]
             );
+
+            request.setNotes("Where in the world is carmen sandiego");
 
             service.createBookABusinessForMeRequest(request,(response: OTWSResponse) => {
 

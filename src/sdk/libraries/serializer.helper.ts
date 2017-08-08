@@ -1,4 +1,4 @@
-class SerializerHelper {
+export class SerializerHelper {
 
     static serializeArray(list: OTWSSerializable[]): Object[] {
 
