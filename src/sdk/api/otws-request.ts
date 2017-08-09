@@ -1,4 +1,4 @@
-import { OpenTimeBoilerPlateSDK } from "./opentime-boilerplate-sdk";
+import { TimeRocketBoilerPlateSDK } from "./timerocket-boilerplate-sdk";
 import { HttpAppRequest } from "../libraries/http-app-request";
 import { OTWSConstant } from "./otws-constant";
 
@@ -12,15 +12,15 @@ export class OTWSRequest {
 
   public getResponse(api: string, apiMethod, httpMethod: string, data: any, callback: (responseObject) => void) {
 
-    let key = OpenTimeBoilerPlateSDK.getService().getAPIKey();
+    let key = TimeRocketBoilerPlateSDK.getService().getAPIKey();
 
     if (key !== null && key !== '') {
-      this._request.setRequestHeader(OTWSConstant.API_KEY_NAME, OpenTimeBoilerPlateSDK.getService().getAPIKey());
+      this._request.setRequestHeader(OTWSConstant.API_KEY_NAME, TimeRocketBoilerPlateSDK.getService().getAPIKey());
     }
 
     this._request.setRequestHeader(OTWSConstant.API_VERSION_NAME, OTWSConstant.API_VERSION);
 
-    let url = OpenTimeBoilerPlateSDK.getService().getEndpoint(api, apiMethod);
+    let url = TimeRocketBoilerPlateSDK.getService().getEndpoint(api, apiMethod);
 
     this._request.getResponse(url, httpMethod, data, callback);
   }

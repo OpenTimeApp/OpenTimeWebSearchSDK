@@ -1,12 +1,12 @@
-# OpenTimeWebSearchSDK
+# TimeRocketWebSearchSDK
 
 ### What is this repository for?
 
-This is boilerplate for a OpenTimeWebSearchSDK.
+This is boilerplate for a TimeRocketWebSearchSDK.
 
 ### Folder Structure
 ```
-|-- .OpenTimeWebSearchSDK
+|-- .TimeRocketWebSearchSDK
     |-- src
         |-- sdk
         |-- tests

@@ -1,6 +1,6 @@
 import { OTWSConstant } from "./otws-constant";
-export class OpenTimeBoilerPlateSDK {
-  private static _sdk: OpenTimeBoilerPlateSDK = null;
+export class TimeRocketBoilerPlateSDK {
+  private static _sdk: TimeRocketBoilerPlateSDK = null;
 
   private _apiKey: string;
   private _inTestMode: boolean;
@@ -12,16 +12,16 @@ export class OpenTimeBoilerPlateSDK {
     this._server = inTestMode ? OTWSConstant.TEST_SERVER : OTWSConstant.LIVE_SERVER;
   }
 
-  public static getService(): OpenTimeBoilerPlateSDK {
-    if (OpenTimeBoilerPlateSDK._sdk !== null) {
-      return OpenTimeBoilerPlateSDK._sdk;
+  public static getService(): TimeRocketBoilerPlateSDK {
+    if (TimeRocketBoilerPlateSDK._sdk !== null) {
+      return TimeRocketBoilerPlateSDK._sdk;
     } else {
-      throw new Error("OpenTimeBoilerPlateSDK not initialized");
+      throw new Error("TimeRocketBoilerPlateSDK not initialized");
     }
   }
 
   public static initService(apiKey: string, inTestMode: boolean = false): void {
-    OpenTimeBoilerPlateSDK._sdk = new OpenTimeBoilerPlateSDK(apiKey, inTestMode);
+    TimeRocketBoilerPlateSDK._sdk = new TimeRocketBoilerPlateSDK(apiKey, inTestMode);
   }
 
   public getEndpoint(api: string, method: string): string {

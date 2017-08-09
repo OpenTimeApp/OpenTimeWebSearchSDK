@@ -1,16 +1,16 @@
 {
-  "name": "opentime-typescript-web-search-sdk",
+  "name": "timerocket-typescript-web-search-sdk",
   "version": "1.0.0",
-  "description": "OpenTime Web Search SDK",
+  "description": "TimeRocket Web Search SDK",
   "scripts": {
     "test": "karma start"
   },
   "keywords": [
-    "opentime",
+    "timerocket",
     "sdk",
     "websearch"
   ],
-  "author": "OpenTime™ Inc.",
+  "author": "TimeRocket™ Inc.",
   "license": "MIT",
   "devDependencies": {
     "jasmine": "^2.6.0",
