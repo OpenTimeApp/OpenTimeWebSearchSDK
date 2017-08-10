@@ -1,7 +1,7 @@
 import {TRBAvailableTime} from "../../../trb-available-time";
 import {SerializerHelper} from "../../../../libraries/serializer.helper";
-import {TRBAPIRequest} from "../../../../intefaces/trb-api-request.interface.ts";
-import {CustomField} from "../../../trb-custom-field.ts";
+import {TRBAPIRequest} from "../../../../intefaces/trb-api-request.interface";
+import {CustomField} from "../../../trb-custom-field";
 
 export class TRBBookItForMeRequestRequest implements TRBAPIRequest {
 
