@@ -1,4 +1,4 @@
-export class OTWSAvailableTime implements OTWSSerializable {
+export class TRBAvailableTime implements TRBSerializable {
 
     private _start: number;
     private _end: number;

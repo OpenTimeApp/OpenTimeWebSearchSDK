@@ -1,13 +1,13 @@
-import { OTWSBusinessAppointmentService } from '../../../../sdk/apis/business/appointment/business-appointment-service';
-import { OTWSBookItForMeRequestRequest } from '../../../../sdk/apis/business/appointment/book-it-for-me-request/otws-book-it-for-me-request-request'
-import {OTWSAvailableTime} from "../../../../sdk/apis/otws-available-time";
-import {OTWSResponse} from "../../../../sdk/api/otws-response";
-import {OTWSBookABusinessForMeRequestRequest} from "../../../../sdk/apis/business/appointment/book-a-business-for-me-request/otws-book-a-business-for-me-request-request";
-import {TestHelper} from "../../../otws-test-helper";
+import { TRBBusinessAppointmentService } from '../../../../sdk/apis/business/appointment/trb-business-appointment-service';
+import { TRBBookItForMeRequestRequest } from '../../../../sdk/apis/business/appointment/book-it-for-me-request/trb-book-it-for-me-request-request'
+import {TRBAvailableTime} from "../../../../sdk/apis/trb-available-time";
+import {TRBResponse} from "../../../../sdk/api/trb-response";
+import {TRBBookABusinessForMeRequestRequest} from "../../../../sdk/apis/business/appointment/book-a-business-for-me-request/trb-book-a-business-for-me-request-request";
+import {TestHelper} from "../../../trb-test-helper";
 
 describe("Business Appointment Service", () => {
 
-    let service: OTWSBusinessAppointmentService;
+    let service: TRBBusinessAppointmentService;
 
     beforeAll((done) => {
         TestHelper.beforeAll();
@@ -21,18 +21,18 @@ describe("Business Appointment Service", () => {
     });
 
     beforeEach(() => {
-        service = new OTWSBusinessAppointmentService();
+        service = new TRBBusinessAppointmentService();
     });
 
     describe('Method: createBookItForMeRequest ', () => {
         it('should request an appointment', (done) => {
 
-            let fakeAvailableTime = new OTWSAvailableTime();
+            let fakeAvailableTime = new TRBAvailableTime();
 
             fakeAvailableTime.setStart(1499478764);
             fakeAvailableTime.setEnd(1499478764 + 3600 * 3);
 
-            let request = new OTWSBookItForMeRequestRequest(
+            let request = new TRBBookItForMeRequestRequest(
                 "fakeFirstName",
                 "fakeLastName",
                 "fakeEmail@email.com",
@@ -44,7 +44,7 @@ describe("Business Appointment Service", () => {
 
             request.setNotes("I am the shindit");
 
-            service.createBookItForMeRequest(request,(response: OTWSResponse) => {
+            service.createBookItForMeRequest(request,(response: TRBResponse) => {
 
                 expect(response.getSuccess()).toBe(true, response.getErrorMessages());
 
@@ -56,12 +56,12 @@ describe("Business Appointment Service", () => {
     describe('Method: createBookABusinessForMeRequest ', () => {
         it('should request an appointment with a business', (done) => {
 
-            let fakeAvailableTime = new OTWSAvailableTime();
+            let fakeAvailableTime = new TRBAvailableTime();
 
             fakeAvailableTime.setStart(1499478764);
             fakeAvailableTime.setEnd(1499478764 + 3600 * 3);
 
-            let request = new OTWSBookABusinessForMeRequestRequest(
+            let request = new TRBBookABusinessForMeRequestRequest(
                 "fakeFirstName",
                 "fakeLastName",
                 "fakeEmail@email.com",
@@ -76,7 +76,7 @@ describe("Business Appointment Service", () => {
             request.setPlacesID("alskdflaksjdflakjsdlfkjsdlkj");
             request.setBusinessID(1);
 
-            service.createBookABusinessForMeRequest(request,(response: OTWSResponse) => {
+            service.createBookABusinessForMeRequest(request,(response: TRBResponse) => {
 
                 expect(response.getSuccess()).toBe(true, response.getErrorMessages());
 

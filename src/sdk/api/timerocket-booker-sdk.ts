@@ -1,6 +1,6 @@
-import { OTWSConstant } from "./otws-constant";
-export class TimeRocketBoilerPlateSDK {
-  private static _sdk: TimeRocketBoilerPlateSDK = null;
+import { TRBConstant } from "./trb-constant";
+export class TimeRocketBookerSDK {
+  private static _sdk: TimeRocketBookerSDK = null;
 
   private _apiKey: string;
   private _inTestMode: boolean;
@@ -9,23 +9,23 @@ export class TimeRocketBoilerPlateSDK {
   constructor(apiKey: string, inTestMode: boolean) {
     this._apiKey = apiKey;
     this._inTestMode = inTestMode;
-    this._server = inTestMode ? OTWSConstant.TEST_SERVER : OTWSConstant.LIVE_SERVER;
+    this._server = inTestMode ? TRBConstant.TEST_SERVER : TRBConstant.LIVE_SERVER;
   }
 
-  public static getService(): TimeRocketBoilerPlateSDK {
-    if (TimeRocketBoilerPlateSDK._sdk !== null) {
-      return TimeRocketBoilerPlateSDK._sdk;
+  public static getService(): TimeRocketBookerSDK {
+    if (TimeRocketBookerSDK._sdk !== null) {
+      return TimeRocketBookerSDK._sdk;
     } else {
-      throw new Error("TimeRocketBoilerPlateSDK not initialized");
+      throw new Error("TimeRocketBookerSDK not initialized");
     }
   }
 
   public static initService(apiKey: string, inTestMode: boolean = false): void {
-    TimeRocketBoilerPlateSDK._sdk = new TimeRocketBoilerPlateSDK(apiKey, inTestMode);
+    TimeRocketBookerSDK._sdk = new TimeRocketBookerSDK(apiKey, inTestMode);
   }
 
   public getEndpoint(api: string, method: string): string {
-    let endpoint: string = this._server + '/' + api + OTWSConstant.API_BASE_URL;
+    let endpoint: string = this._server + '/' + api + TRBConstant.API_BASE_URL;
     if (method !== '') {
       endpoint += '/' + method;
     }

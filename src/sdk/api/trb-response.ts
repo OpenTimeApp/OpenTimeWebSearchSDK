@@ -1,4 +1,4 @@
-export class OTWSResponse {
+export class TRBResponse {
   private _success: boolean;
   private _message: string;
   private _developerMessage: string = "";

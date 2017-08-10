@@ -1,6 +1,6 @@
 export class SerializerHelper {
 
-    static serializeArray(list: OTWSSerializable[]): Object[] {
+    static serializeArray(list: TRBSerializable[]): Object[] {
 
         let serializedList: Object[] = [];
 

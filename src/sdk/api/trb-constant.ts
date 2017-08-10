@@ -1,4 +1,4 @@
-export class OTWSConstant {
+export class TRBConstant {
   public static readonly API_KEY_NAME = 'API_KEY';
   public static readonly API_VERSION = '1.0.0';
   public static readonly API_VERSION_NAME = 'Version';

@@ -1,6 +1,6 @@
-import {OTWSBookItForMeRequestRequest} from "../book-it-for-me-request/otws-book-it-for-me-request-request";
+import {TRBBookItForMeRequestRequest} from "../book-it-for-me-request/trb-book-it-for-me-request-request";
 
-export class OTWSBookABusinessForMeRequestRequest extends OTWSBookItForMeRequestRequest implements OTWSAPIRequest {
+export class TRBBookABusinessForMeRequestRequest extends TRBBookItForMeRequestRequest implements TRBAPIRequest {
 
     private _businessID: number;
     private _placesID: string;

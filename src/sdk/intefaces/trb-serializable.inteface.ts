@@ -1,0 +1,3 @@
+interface TRBSerializable {
+    serialize(): any;
+}

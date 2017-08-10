@@ -1,0 +1,3 @@
+interface TRBAPIRequest {
+    getData(): Object;
+}

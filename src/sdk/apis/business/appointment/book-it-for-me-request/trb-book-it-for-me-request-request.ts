@@ -1,12 +1,12 @@
-import {OTWSAvailableTime} from "../../../otws-available-time";
+import {TRBAvailableTime} from "../../../trb-available-time";
 import {SerializerHelper} from "../../../../libraries/serializer.helper";
 
-export class OTWSBookItForMeRequestRequest implements OTWSAPIRequest {
+export class TRBBookItForMeRequestRequest implements TRBAPIRequest {
 
     private _firstName: string;
     private _lastName: string;
     private _email: string;
-    private _availableTimes: OTWSAvailableTime[];
+    private _availableTimes: TRBAvailableTime[];
     private _customFields: CustomField[];
     private _service: string;
     private _city: string;
@@ -19,7 +19,7 @@ export class OTWSBookItForMeRequestRequest implements OTWSAPIRequest {
                 service: string,
                 city: string,
                 timeZoneLongName: string,
-                availableTimes: OTWSAvailableTime[]
+                availableTimes: TRBAvailableTime[]
     ) {
         this._firstName = firstName;
         this._lastName = lastName;
@@ -59,7 +59,7 @@ export class OTWSBookItForMeRequestRequest implements OTWSAPIRequest {
         return this._city;
     }
 
-    private _getAvailableTimes(): OTWSAvailableTime[] {
+    private _getAvailableTimes(): TRBAvailableTime[] {
         return this._availableTimes;
     }
 
