@@ -1,4 +1,4 @@
-class CustomField implements TRBSerializable {
+export class CustomField implements TRBSerializable {
 
     private _id: string;
     private _value: string;

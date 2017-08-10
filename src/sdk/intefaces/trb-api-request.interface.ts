@@ -1,3 +1,3 @@
-interface TRBAPIRequest {
+export interface TRBAPIRequest {
     getData(): Object;
 }
