@@ -1,7 +1,7 @@
 {
-  "name": "timerocket-typescript-web-search-sdk",
+  "name": "timerocket-typescript-booker-sdk",
   "version": "1.0.0",
-  "description": "TimeRocket Web Search SDK",
+  "description": "TimeRocket Booker SDK",
   "scripts": {
     "test": "karma start"
   },
