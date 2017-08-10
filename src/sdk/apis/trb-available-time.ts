@@ -1,3 +1,5 @@
+import "../intefaces/trb-serializable.inteface";
+
 export class TRBAvailableTime implements TRBSerializable {
 
     private _start: number;

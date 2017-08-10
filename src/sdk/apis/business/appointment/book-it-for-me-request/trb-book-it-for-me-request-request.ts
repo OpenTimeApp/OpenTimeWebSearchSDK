@@ -1,5 +1,7 @@
 import {TRBAvailableTime} from "../../../trb-available-time";
 import {SerializerHelper} from "../../../../libraries/serializer.helper";
+import {TRBAPIRequest} from "../../../../intefaces/trb-api-request.interface.ts";
+import {CustomField} from "../../../trb-custom-field.ts";
 
 export class TRBBookItForMeRequestRequest implements TRBAPIRequest {
 
@@ -19,8 +21,7 @@ export class TRBBookItForMeRequestRequest implements TRBAPIRequest {
                 service: string,
                 city: string,
                 timeZoneLongName: string,
-                availableTimes: TRBAvailableTime[]
-    ) {
+                availableTimes: TRBAvailableTime[]) {
         this._firstName = firstName;
         this._lastName = lastName;
         this._email = email;
@@ -67,7 +68,7 @@ export class TRBBookItForMeRequestRequest implements TRBAPIRequest {
         return this._notes;
     }
 
-    private _getTimeZoneLongName(){
+    private _getTimeZoneLongName() {
         return this._timeZoneLongName;
     }
 
@@ -79,7 +80,7 @@ export class TRBBookItForMeRequestRequest implements TRBAPIRequest {
             service: this._getService(),
             city: this._getCity(),
             notes: this._getNotes(),
-            time_zone_long_name : this._getTimeZoneLongName(),
+            time_zone_long_name: this._getTimeZoneLongName(),
             available_times: SerializerHelper.serializeArray(this._getAvailableTimes()),
             custom_fields: SerializerHelper.serializeArray(this._getCustomFields())
         }
