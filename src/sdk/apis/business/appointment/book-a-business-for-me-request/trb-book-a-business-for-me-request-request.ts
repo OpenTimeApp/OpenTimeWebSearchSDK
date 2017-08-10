@@ -1,4 +1,5 @@
 import {TRBBookItForMeRequestRequest} from "../book-it-for-me-request/trb-book-it-for-me-request-request";
+import {TRBAPIRequest} from "../../../../intefaces/trb-api-request.interface";
 
 export class TRBBookABusinessForMeRequestRequest extends TRBBookItForMeRequestRequest implements TRBAPIRequest {
 
