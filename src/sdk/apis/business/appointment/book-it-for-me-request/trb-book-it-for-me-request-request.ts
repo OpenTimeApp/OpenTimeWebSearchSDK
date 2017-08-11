@@ -75,7 +75,7 @@ export class TRBBookItForMeRequestRequest implements TRBAPIRequest {
     getData(): any {
         return {
             first_name: this._getFirstName(),
-            last_name: this._getFirstName(),
+            last_name: this._getLastName(),
             email: this._getEmail(),
             service: this._getService(),
             city: this._getCity(),
